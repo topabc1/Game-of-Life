@@ -1,0 +1,114 @@
+:root {
+	--color: black;
+	--backgroundColor: #65DC55;
+	--borderColor: #282828;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: sans-serif;
+	color: var(--backgroundColor);
+	text-align: center;
+	user-select: none;
+}
+
+body {
+	background-color: var(--color);
+}
+
+h1 {
+	font-weight: 800;
+	font-style: italic;
+}
+
+#grid {
+	display: flex;
+	flex-wrap: wrap;
+	width: 51rem;
+	height: 31rem;
+	margin: auto;
+	border: 0.5rem solid var(--borderColor);
+	border-radius: 0.5rem;
+}
+
+#grid div {
+	width: 1rem;
+	height: 1rem;
+	border: 0.1rem solid var(--borderColor);
+}
+
+#btn-container {
+	width: 18rem;
+	margin: auto;
+	background-color: var(--borderColor);
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
+	margin-top: 1rem;
+}
+
+#btn-container button, #btn-container div {
+	width: 16rem;
+	font-size: 1.2rem;
+	background-color: var(--backgroundColor);
+	color: var(--color);
+	border: none;
+	margin-bottom: 0.2rem;
+	padding: 0.5rem;
+	border-radius: 0.2rem;
+}
+
+#btn-container button:last-of-type {
+	margin-bottom: 0;
+}
+
+#btn-container button {
+	cursor: pointer;
+}
+
+#pattern-container {
+	width: 18rem;
+	margin: auto;
+	background-color: var(--borderColor);
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
+	margin-top: 1rem;
+	display: none;
+}
+
+#generation {
+	color: var(--color);
+}
+
+#pattern-container button, #pattern-container div {
+	width: 16rem;
+	font-size: 1.2rem;
+	background-color: var(--backgroundColor);
+	color: var(--color);
+	border: none;
+	padding: 0.2rem;
+}
+
+#pattern-container button {
+	cursor: pointer;
+}
+
+#pattern-container div {
+	border-radius: 0.2rem 0.2rem 0 0;
+}
+
+#pattern-container button:last-of-type {
+	border-radius: 0 0 0.2rem 0.2rem;
+}
+
+@media only screen and (max-width: 840px) {
+	#grid {
+		transform: scale(0.8);
+	}
+}
+
+@media only screen and (max-width: 770px) {
+	#grid {
+		margin-left: 50vw;
+		transform: translate(-50%, 0) scale(0.5);
+	}
+}
